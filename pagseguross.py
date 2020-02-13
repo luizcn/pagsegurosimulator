@@ -1,0 +1,35 @@
+print("--- Simulador Pagseguro ---")
+print("")
+print("Quanto você quer receber?")
+receiveValue = float(input("Valor: "))
+
+
+def simulateValue():
+    fixTax = 0.40
+    salesValue = round((receiveValue + fixTax) * 1.0415585, 2)
+    parcelTwo = round((salesValue * 1.0451) / 2, 2)
+    parcelThree = round((salesValue * 1.0604) / 3, 2)
+    parcelFour = round((salesValue * 1.0759) / 4, 2)
+    parcelFive = round((salesValue * 1.0915) / 5, 2)
+    parcelSix = round((salesValue * 1.1072) / 6, 2)
+    parcelSeven = round((salesValue * 1.1231) / 7, 2)
+    parcelEight = round((salesValue * 1.1392) / 8, 2)
+    parcelNine = round((salesValue * 1.1554) / 9, 2)
+    parcelTen = round((salesValue * 1.1717) / 10, 2)
+    parcelEleven = round((salesValue * 1.1881) / 11, 2)
+    parcelTwelve = round((salesValue * 1.2048) / 12, 2)
+    print('Valor de venda(à vista):',salesValue)
+    print('2 x',parcelTwo,'=',round(parcelTwo*2, 2))
+    print('3 x',parcelThree,'=',round(parcelThree*3, 2))
+    print('4 x',parcelFour,'=',round(parcelFour*4, 2))
+    print('5 x',parcelFive,'=',round(parcelFive*5, 2))
+    print('6 x',parcelSix,'=',round(parcelSix*6, 2))
+    print('7 x',parcelSeven,'=',round(parcelSeven*7, 2))
+    print('8 x',parcelEight,'=',round(parcelEight*8, 2))
+    print('9 x',parcelNine,'=',round(parcelNine*9, 2))
+    print('10 x',parcelTen,'=',round(parcelTen*10, 2))
+    print('11 x',parcelEleven,'=',round(parcelEleven*11, 2))
+    print('12 x',parcelTwelve,'=',round(parcelTwelve*12, 2))
+
+simulateValue()
+
