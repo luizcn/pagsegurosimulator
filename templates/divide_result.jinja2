@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Simulador Pagseguro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body>
+    <div id="div1">
+        <ul id ="fullResult" class="list-group">
+            <li class="list-group-item active">Valor que a Zumaq recebe: R${{number}}</li>
+            <li class="list-group-item">Valor de venda à vista: R${{result}}</li>
+            <li class="list-group-item">2 x R${{presult2}} = R${{result2}}</li>
+            <li class="list-group-item">3 x R${{presult3}} = R${{result3}}</li>
+            <li class="list-group-item">4 x R${{presult4}} = R${{result4}}</li>
+            <li class="list-group-item">5 x R${{presult5}} = R${{result5}}</li>
+            <li class="list-group-item">6 x R${{presult6}} = R${{result6}}</li>
+            <li class="list-group-item">7 x R${{presult7}} = R${{result7}}</li>
+            <li class="list-group-item">8 x R${{presult8}} = R${{result8}}</li>
+            <li class="list-group-item">9 x R${{presult9}} = R${{result9}}</li>
+            <li class="list-group-item">10 x R${{presult10}} = R${{result10}}</li>
+            <li class="list-group-item">11 x R${{presult11}} = R${{result11}}</li>
+            <li class="list-group-item">12 x R${{presult12}} = R${{result12}}</li>
+        </ul>
+    </div>
+    
+    <button id="button1" onclick="CopyToClipboard('div1')" class="btn btn-secondary col-md-12">Copiar</button>
+    
+    <form action="/">
+        <button id="button2" class="btn btn-success col-md-12">Finalizar e Retornar</button>
+    </form>
+            
+    <script>
+        function CopyToClipboard(containerid) {
+        if (document.selection) {
+            var range = document.body.createTextRange();
+            range.moveToElementText(document.getElementById(containerid));
+            range.select().createTextRange();
+            document.execCommand("copy");
+        }     
+        else if (window.getSelection) {
+            var range = document.createRange();
+            range.selectNode(document.getElementById(containerid));
+            window.getSelection().addRange(range);
+            document.execCommand("copy");
+            alert("Valores copiados, cole aonde quiser!")
+            }
+        }
+        </script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>

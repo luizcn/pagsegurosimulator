@@ -1,2 +1,5 @@
 # PagSeguro Sales Simulator
-> A PagSeguro parcel simulator.
+> A PagSeguro parcel/sale simulator made with Python/Flask.
+
+
+
