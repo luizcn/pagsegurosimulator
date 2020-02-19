@@ -16,7 +16,7 @@ def simulateValue():
     parcelEight = round((salesValue * 1.1392) / 8, 2)
     parcelNine = round((salesValue * 1.1554) / 9, 2)
     parcelTen = round((salesValue * 1.1717) / 10, 2)
-    parcelEleven = round((salesValue * 1.1881) / 11, 2)
+    parcelEleven = round((salesValue * 1.1882) / 11, 2)
     parcelTwelve = round((salesValue * 1.2048) / 12, 2)
     print('Valor de venda(à vista): R$',salesValue)
     print('2 x R$',parcelTwo,'= R$',round(parcelTwo*2, 2))
